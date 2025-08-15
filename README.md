@@ -234,9 +234,7 @@ If you use this workflow or the produced **XevaSet** in a publication, please ci
 
 ## License
 
-Add your license here (e.g., **MIT**).  
-If you include third-party data, ensure you have the rights to redistribute it and include any required attribution or data-use terms.
-
+**MIT**  
 
 ## Contributions
 
