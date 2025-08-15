@@ -50,15 +50,11 @@ The pipeline scans & validates raw inputs, processes and updates annotations, bu
 git clone git@github.com:BHKLAB-DataProcessing/Xevacurate_Snakemake_UHN_Lung.git
 cd Xevacurate_Snakemake_UHN_Lung
 
-# 2) Ensure inputs are placed under data/input/... (see below)
-
-# 3) Optional: edit config.yaml to set names or the Docker image
-
-# 4) Dry run
+# 2) Dry run
 PYTHONPATH=src pixi run snakemake -n
 
-# 5) Execute (adjust cores to taste)
-PYTHONPATH=src pixi run snakemake --cores 4
+# 3) Execute (adjust cores to taste)
+PYTHONPATH=src pixi run snakemake --cores 4 --printshellcmds
 ```
 
 The final XevaSet appears at:
