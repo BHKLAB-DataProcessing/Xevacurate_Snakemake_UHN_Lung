@@ -96,51 +96,37 @@ rule build:
 
 rule create_xevaset:
     input:
-        expand(
-            "results/build/{f}.csv",
-            f=[
-                "model", "drug", "experiment", "expDesign",
-                "modToBiobaseMap", "CNV_pdata", "mutation_pdata", "RNASeq_pdata"
-            ],
-        )
+       "results/build/model.csv",
+        "results/build/drug.csv",
+        "results/build/experiment.csv",
+        "results/build/expDesign.csv",
+        "results/build/modToBiobaseMap.csv",
+        "results/build/CNV_pdata.csv",
+        "results/build/mutation_pdata.csv",
+        "results/build/RNASeq_pdata.csv"
     output:
-        # derive from config to avoid duplication
-        rds=lambda wildcards: "results/xevaset/{}".format(
-            config.get("xevaset", {}).get(
-                "rds_name", "UHN_Tsao_Lung_DrugResponse_2022_v1.rds"
-            )
-        )
+        rds= "results/xevaset/UHN_Tsao_Lung_DrugResponse_2022_v1.rds"
     params:
-        image     = config.get("docker", {}).get("xeva_r_image", "docker.io/gfeng2023/xeva-build-r:bioc-3.20"),
+        image     = config.get("docker", {}).get("xeva_r_image", "xeva-build-r:bioc-3.20"),
         build_dir = "results/build",
         omics_dir = "data/input/omics",
         out_dir   = "results/xevaset",
         name      = config.get("xevaset", {}).get("name", "Tsao_Lung_2022"),
-        rds_name  = config.get("xevaset", {}).get("rds_name", "UHN_Tsao_Lung_DrugResponse_2022_v1.rds"),
-        # uncomment if you want to force a specific arch (e.g., on Apple Silicon running amd64 layers):
-        # platform = "--platform linux/amd64"
-        platform = ""
+        rds_name  = config.get("xevaset", {}).get("rds_name", "UHN_Tsao_Lung_DrugResponse_2022_v1.rds")
     log:
         "logs/xevaset/xevaset.log"
     shell:
         r"""
         set -euo pipefail
         mkdir -p "{params.out_dir}" "logs/xevaset"
-
-        # run inside container, write files as host user, capture ALL output to log
-        {{
-          docker run --rm \
-            -u "$(id -u):$(id -g)" \
-            -v "$PWD":/work -w /work \
-            {params.platform} \
-            {params.image} \
-            Rscript workflow/scripts/create_xevaset.R \
-              --build-dir {params.build_dir} \
-              --omics-dir {params.omics_dir} \
-              --out-dir {params.out_dir} \
-              --name {params.name} \
-              --rds-name {params.rds_name}
-        }} > "{log}" 2>&1
+        docker run --rm -v "$PWD":/work -w /work {params.image} \
+          Rscript workflow/scripts/create_xevaset.R \
+            --build-dir {params.build_dir} \
+            --omics-dir {params.omics_dir} \
+            --out-dir {params.out_dir} \
+            --name {params.name} \
+            --rds-name {params.rds_name} \
+          > "{log}" 2>&1
 
         # sanity check
         test -s "{output.rds}"
