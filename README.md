@@ -47,7 +47,7 @@ The pipeline scans & validates raw inputs, processes and updates annotations, bu
 
 ```bash
 # 1) Clone
-git clone <your-repo-url>
+git clone git@github.com:BHKLAB-DataProcessing/Xevacurate_Snakemake_UHN_Lung.git
 cd Xevacurate_Snakemake_UHN_Lung
 
 # 2) Ensure inputs are placed under data/input/... (see below)
