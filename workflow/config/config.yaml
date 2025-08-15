@@ -1,5 +1,5 @@
 docker:
-  xeva_r_image: xeva-build-r:bioc-3.20
+  xeva_r_image: docker.io/gfeng2023/xeva-build-r:bioc-3.20
 
 xevaset:
   name: Tsao_Lung_2022

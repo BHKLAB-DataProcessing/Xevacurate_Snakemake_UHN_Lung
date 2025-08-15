@@ -21,13 +21,6 @@ def update_model_id(samplename: str, filename: str):
 
     def _extract_from_parts(parts, label):
         passage_numbers = [p for p in parts if re.match(r"^P\d+$", p)]
-        # if not passage_numbers:
-        #     raise ValueError(
-        #     f"No passage number (P#) found in {label}.\n"
-        #     "Expected samplename format:\n"
-        #     " - For parental lines: 'MODEL_ID P# (TREATMENT_DRUG_NAME) DATE.xlsx'\n"
-        #     " - For resistant lines: 'MODEL_ID P# RES_DRUG_NAME RES P# (TREATMENT_DRUG_NAME) DATE.xlsx'"
-        # )
 
         if "RES" in parts:
             model_type = "Resistant"
@@ -51,13 +44,6 @@ def update_model_id(samplename: str, filename: str):
                 index_second_last = parts.index('RES')
                 resistant_drug = parts[index_second_last - 1]
                 model_part = parts[:index_second_last - 1]
-
-                
-
-                # if parts[-1] == "RES":
-                #     resistant_passage = "Pn"
-                # else:
-                #     resistant_passage = passage_numbers[0]
 
                 if model_part and resistant_drug: # both fields are non-empty
                     model_id = "_".join(model_part).replace(" ", "").upper() + f"_{resistant_drug}_RES"
@@ -202,115 +188,6 @@ def update_model_id(samplename: str, filename: str):
     else:
         return (model_id, sample_id, model_type)
 
-
-
-
-
-
-
-    # # if the sample name is wrong(too short, contain time), use file name to extract modelid
-    # if len(samplename) < 4 or "00:00:00" in samplename:
-    #     print(samplename, len(samplename))
-    #     name_wo_ext = os.path.splitext(filename)[0].upper()
-    #     # older files names usually start with "COPY OF", remove it before extract information
-    #     if name_wo_ext.startswith("XCOPY OF "):
-    #         name_wo_ext = name_wo_ext[len("XCOPY OF "):]
-    #     if name_wo_ext.startswith("COPY OF "):
-    #         name_wo_ext = name_wo_ext[len("COPY OF "):]
-    #     name_wo_ext = (name_wo_ext.replace("REF B ", "REFB")
-    #                    .replace("REF ", "REF")
-    #                    .replace("REF S ", "REFS")
-    #                    .replace("BL", "")
-    #                    .replace("TTK+TAX", "TTK/TAX")
-    #                 )
-    #     #parts = name_wo_ext.strip().split(" ")
-    #     parts = re.split(r"\s+", name_wo_ext.strip())
-    #     return _extract_from_parts(parts, f"filename '{filename}'")
-    
-    # # default to use samplename to extract modelid
-    # else: 
-    #     _pattern1 = re.compile(r'P[XM]\s*\+?\s*(\d+)', re.IGNORECASE)
-    #     samplename = _pattern1.sub(r'P\1', samplename)
-    #     samplename = (samplename.replace("#2- COHORT", "")
-    #               .replace("- OCT 12/16", "")
-    #               .replace(" (+METGEL)", "")
-    #               .replace("(+METGEL FPI)", "")
-    #               .replace("TNBC", "")
-    #               .replace("AXILLA", "")
-    #               .replace("(66820)", "")
-    #               .replace("PNA", "")
-    #               .replace("P6-", "P6 ")
-    #               .replace("BPTO.", "BPTO")
-    #               .replace("BXTO.", "BXTO")
-    #               .replace("PARENTAL", "")
-    #               .replace("INS B 0", "INSB0")
-    #               .replace("INSB014 ST", "INSB014")
-    #               .replace("INSB019 CT2", "INSB019")
-    #               .replace("NOTCH ", "NOTCH")
-    #               .replace("NOTCHB02P5-", "NOTCHB02 P5 ")
-    #               .replace("REF-OV-", "REFOV")
-    #               .replace("REF OV-", "REFOV")
-    #               .replace("REF S ", "REFS")
-    #               .replace("REF OV-", "REFOV")
-    #               .replace("REF OV ", "REFOV")
-    #               .replace("REV OV ", "REFOV ")
-    #               .replace("REF B ", "REFB")
-    #               .replace("REF ", "REF")
-    #               .replace("B BL", "")
-    #               .replace("BXBL", "")
-    #               .replace("BX BL", "")
-    #               .replace("BL", "")
-    #               .replace("REF06", "REF006")
-    #               .replace("(JULY 12, 2016)", "")
-    #               .replace("(JULY 12/16)", "")
-    #               .replace("BT-", "BT")
-    #               .replace("BVR-0-", "BVR0")
-    #               .replace("BVR-M-", "BVRM")
-    #               .replace("REF010 P3 945", "REF010 P3 945 RES")
-    #               .replace("RES 945/BMN/TAX", "945/BMN/TAX RES")
-    #               .replace("RES 945/BMN", "945/BMN RES")
-    #               .replace("RES 945+ABT80", "945/ABT80 RES")
-    #               .replace("RES 945LD", "945LD RES")
-    #               .replace("RES 945W", "945W RES")
-    #               .replace("RES 945", "945 RES")
-    #               .replace("945 WEEKLY RES", "945W RES")
-    #               .replace("945 WKLY RES", "945W RES")
-    #               .replace("RES CDX","CDX RES")
-    #               .replace("ERIBULIN", "ERIB")
-    #               .replace("RES ERIB LD", "ERIBLD RES")
-    #               .replace("RES ERIB", "ERIB RES")
-    #               .replace("ERIB LD RES", "ERIBLD RES")
-    #               .replace("ERIB LD RE", "ERIBLD RES")
-    #               .replace("ERIB ELD", "ERIBELD")
-    #               .replace("RES ERIB RES", "ERIB RES")
-    #               .replace("RES TAX", "TAX RES")
-    #               .replace("RES BMN RES", "BMN RES")
-    #               .replace(" TAXOL", " TAX")
-    #               .replace("/TAXOL", "TAX")
-    #               .replace("RES TTK/TAX", "TTK/TAX RES")
-    #               .replace("TAX 15MG", "TAXLD")
-    #               .replace("TAX 15", "TAXLD")
-    #               .replace("CARBORES", "CARBO RES")
-    #               .replace("NOTCH06TAXRESPM+6","NOTCH06 TAX RES PM+6")
-    #               .replace("DOCETAXOLRES", "DOCE RES")
-    #               .replace("DOCETAXOL", "DOCE")
-    #               .replace("DOCETAXEL", "DOCE")
-    #               .replace("RES CX", "CX RES")
-    #               .replace("RES CARBO", "CARBO RES")
-    #               .replace("RES BMN", "BMN RES")
-    #               .replace("RED010", "REF010")
-    #               .replace("P2- NOV 3/16", "P2")
-    #               .replace("P2- NOV 9/16", "P2")
-    #               .replace("RES TTK8/TAX20", "TTK8/TAX20 RES")
-    #               .replace("TTK+TAX", "TTK/TAX")
-    #               .replace("REF001CARBORESP3", "REF001 CARBO RES P3")
-    #               .replace("RES TAX15", "TAXLD RES")
-    #               .replace(" TAX15 ", " TAXLD ")
-    #               .replace("RES TTK", "TTK RES")
-    #             )
-    #     parts = re.split(r"\s+", samplename.strip().upper())
-    #     return _extract_from_parts(parts, f"samplename '{samplename}'")
-
 def dose_number_unit_split(dose_series: pd.Series) -> pd.DataFrame:
     """
     Splits a pandas Series of dose strings into two columns: numeric and unit.
@@ -321,14 +198,6 @@ def dose_number_unit_split(dose_series: pd.Series) -> pd.DataFrame:
     Returns:
         pd.DataFrame: A DataFrame with two columns: 'dose_numeric' (as float) and 'dose_unit' (str).
     """
-    # # Define a regex pattern to capture the numeric part and the unit part
-    # pattern = r"([0-9]*\.?[0-9]+)\s*(.*)"
-    # # Use str.extract to split into two groups
-    # result = dose_series.str.extract(pattern)
-    # # Convert the numeric part to float; errors='coerce' sets invalid parsing to NaN
-    # result['dose'] = pd.to_numeric(result['dose'], errors='coerce')
-    # result['dose.unit'] = result['dose.unit'].fillna('').str.strip()
-    # return result
     
     # Function to process each dose string
     def split_composite_dose(dose_str):
@@ -471,18 +340,6 @@ def update_drug_data(raw_data: str, drug_map: str) -> pd.DataFrame:
     #drug_df = drug_df.drop(columns={'comment_Dave','comment_Mitchell'})
     drug_df = drug_df.astype({'drug': 'string'})
 
-    # only include drugs with "Yes" for keep
-    # drug_df = drug_df[drug_df["keep"] == "Yes"]
-
-    #drug_df = drug_df[drug_df["keep"] == "yes"]
-    #### here now
-    # merge drug mapping files with the raw data, remove extra columns
-    # update_df = drug_df.merge(raw_df, on=['Drug', 'Dose'], how='inner')
-    # update_df = update_df.rename(columns={'treatment.standarized': 'drug.id'})
-    # update_df['drug'] = update_df['drug.id']
-    # update_df['drug.alternativename'] = update_df['Drug'].where(update_df['Drug'] != update_df['drug.id'], "")
-    # update_df = update_df.drop(columns=['Dose', 'keep', 'Drug'])
-
     update_df = drug_df.merge(raw_df, on='drug', how='right')
     update_df = update_df.rename(columns={'treatment.standardized': 'drug.id'})
     update_df['drug.alternativename'] = update_df['drug'].where(update_df['drug'] != update_df['drug.id'], "")
@@ -497,10 +354,6 @@ def update_drug_data(raw_data: str, drug_map: str) -> pd.DataFrame:
     drug_df = drug_df[drug_df["keep"] == "yes"]
     raw_unmatched = raw_df.merge(drug_df, on=['drug'], how='left', indicator=True)
     raw_unmatched = raw_unmatched[raw_unmatched['_merge'] == 'left_only'].drop(columns=['_merge'])
-
-    # splite number and unit for dose
-    #update_df[['dose', 'dose.unit']] = dose_number_unit_split(update_df['dose.standardized'])
-    #update_df = update_df.drop(columns=['dose.standardized'])
 
     return update_df, raw_unmatched
 
@@ -519,15 +372,10 @@ def update_batch_data(raw_file: str) -> pd.DataFrame:
     
     # Create a 'batch' column by concatenating 'ModelID' and 'drug_id'
     df["drug.id"] = df["drug"]
-    #df["batch"] = df["ModelID"].astype(str) + "." + df["drug.id"].astype(str)
-    #df["batch"] = df["SampleID"].str.split("_").str[0].astype(str) + "." + df["drug.id"].astype(str)
-    #df["model.id"] = df["SampleID"].str.split("_").str[0].astype(str) + "." + df["drug.id"].astype(str) + "." + df["SampleID"].str.split("_").str[1].astype(str)
     df["file_number"] = "f" + (df.groupby("file_name").ngroup() + 1).astype(str) # need file name in batch infor to distinguis
     df["batch"] = df["file_number"] + "." + df["SampleID"].str.split("_").str[0]+ ".TPX." + df["drug.id"].astype(str)
     df["model.id"] = df["file_number"] + "." + df["SampleID"].str.split("_").str[0]+ ".TPX." + df["drug.id"].astype(str) + "." + df["SampleID"].str.split("_").str[1].astype(str)
     df = df.rename(columns={"Drug": "drug"})
-    # Group by 'batch' (preserving original order) and apply mouse ID assignment
-    #updated_df = df.groupby("batch", sort=False, group_keys=False).apply(assign_mouse_ids).reset_index(drop=True)
     
     return df
 
