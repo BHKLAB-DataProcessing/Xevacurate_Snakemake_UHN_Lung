@@ -1,0 +1,41 @@
+ModelID,Parent PMLB_case,stem_PPID,sex,oncotree_code,primary_tumor_site,cancer_type_detailed,Parent PMLB_specimen,tissue_tumor_normal_designation,primary_recurrence_metastasis,TNM_stage,specimen_collection_site,Parent PMLB_xenograft,alias.id,sample_class,host_strain_name,host_strain_nomenclature,engraftment_site,engraftment_type,engraftment_material,engraftment_material_status,pubmed_ID
+PHLC108,PHLC0108,,,,,,,,,,,,,,,,,,,,
+PHLC110,PHLC0110,8664.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0110.TPT,T,primary,"T2a,N0,M0",Lung,PHLC0110.TPX,PHLC 110,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081768"
+PHLC111,PHLC0111,16224.0,M,LUAD,Lung,Lung Adenocarcinoma,PHLC0111.TPT,T,primary,"T2b,N0,M0",Lung,PHLC0111.TPX,PHLC 111,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081684"
+PHLC119,PHLC0119,32913.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0119.TPT,T,primary,"T3,N2,M0",Lung,PHLC0119.TPX,PHLC 119,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081751"
+PHLC12,PHLC0012,8790.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0012.TPT,T,primary,"T3,N1,M0",Lung,PHLC0012.TPX,PHLC012,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081769"
+PHLC132,PHLC0132,19698.0,M,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0132.TPT,T,primary,"T2a,N0,M0",Lung,PHLC0132.TPX,PHLC 132,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081689"
+PHLC137,PHLC0137,2851.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0137.TPT,T,primary,"T2a,N2,M0",Lung,PHLC0137.TPX,"PHLC 137,PHLC4008",PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081779, PMID: 26124487"
+PHLC140,PHLC0140,24731.0,M,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0140.TPT,T,,,Lung,,,,,,,,,,
+PHLC142,PHLC0142,,,,,,,,,,,,,,,,,,,,
+PHLC148,PHLC0148,18334.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0148.TPT,T,primary,"T2a,N2,M0",Lung,PHLC0148.TPX,PHLC 148,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081688, PMID: 26124487"
+PHLC151,PHLC0151,12146.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0151.TPT,T,primary,"T2a,N0,M0",Lung,PHLC0151.TPX,PHLC 151,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081665"
+PHLC153,PHLC0153,6674.0,M,LUAD,Lung,Lung Adenocarcinoma,PHLC0153.TPT,T,primary,"T2a,N1,M0",Lung,PHLC0153.TPX,PHLC 153,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081755"
+PHLC164,PHLC0164,13898.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0164.TPT,T,primary,"T2b,N1,M0",Lung,PHLC0164.TPX,PHLC 164,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081675, PMID: 26124487, PMID: 26926157"
+PHLC169,PHLC0169,26392.0,M,LUAD,Lung,Lung Adenocarcinoma,PHLC0169.TPT,T,primary,"T4,N0,M0",Lung,PHLC0169.TPX,PHLC 169,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081707"
+PHLC181,PHLC0181,26859.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0181.TPT,T,primary,"T2a,N0,M0",Lung,PHLC0181.TPX,PHLC 181,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081708"
+PHLC186,PHLC0186,,,,,,,,,,,,,,,,,,,,
+PHLC188,PHLC0188,27096.0,M,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0188.TPT,T,primary,"T2a,N0,M0",Lung,PHLC0188.TPX,PHLC 188,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081711"
+PHLC189,PHLC0189,2963.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0189.TPT,T,primary,"T3,N0,M0",Lung,PHLC0189.TPX,PHLC 189,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081781"
+PHLC191,PHLC0191,27210.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0191.TPT,T,primary,"T2b,N0,M0",Lung,PHLC0191.TPX,PHLC 191,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081712"
+PHLC192,PHLC0192,5182.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0192.TPT,T,primary,"T1b,N1,M0",Lung,PHLC0192.TPX,PHLC 192,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081656, PMID: 26124487"
+PHLC196,PHLC0196,27433.0,M,LUAD,Lung,Lung Adenocarcinoma,PHLC0196.TPT,T,primary,"T2b,N0,M0",Lung,PHLC0196.TPX,PHLC 196,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081714"
+PHLC200,PHLC0200,21416.0,F,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0200.TPT,T,primary,"T4,N0,M0",Lung,PHLC0200.TPX,PHLC 200,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081691"
+PHLC215,PHLC0215,23703.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0215.TPT,T,primary,"T2a,N1,M0",Lung,PHLC0215.TPX,PHLC 215,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081694"
+PHLC228,PHLC0228,702.0,M,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0228.TPT,T,primary,"T2a,N2,M0",Lung,PHLC0228.TPX,PHLC 228,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081782"
+PHLC229,PHLC0229,28016.0,M,LUAD,Lung,Lung Adenocarcinoma,PHLC0229.TPT,T,primary,"T4,N1,M0",Lung,PHLC0229.TPX,PHLC 229,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081718"
+PHLC235,PHLC0235,8076.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0235.TPT,T,primary,"T2a,N2,M0",Lung,PHLC0235.TPX,PHLC 235,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081764"
+PHLC267,PHLC0267,32837.0,M,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0267.TPT,T,primary,"T1a,N0,M0",Lung,PHLC0267.TPX,PHLC 267,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081750"
+PHLC274,PHLC0274,32937.0,M,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0274.TPT,T,primary,"T2b,N1,M0",Lung,PHLC0274.TPX,PHLC 274,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081752"
+PHLC299,PHLC0299,2770.0,F,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0299.TPT,T,primary,"T2a,N0,M0",Lung,PHLC0299.TPX,PHLC 299,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081778"
+PHLC321,PHLC0321,9507.0,M,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0321.TPT,T,primary,"T3,N0,M0",Lung,PHLC0321.TPX,PHLC 321,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081773"
+PHLC402,PHLC0402,13418.0,M,LUAD,Lung,Lung Adenocarcinoma,PHLC0402.TPT,T,primary,"T4,N1,M0",Lung,PHLC0402.TPX,PHLC 402,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081671, PMID: 27613526"
+PHLC410,PHLC0410,15089.0,F,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0410.TPT,T,primary,"T3,N0,M0",Lung,PHLC0410.TPX,PHLC 410,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081680"
+PHLC470,PHLC0470,14607.0,M,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0470.TPT,T,primary,"T2a,N0,M0",Lung,PHLC0470.TPX,PHLC 470,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081679"
+PHLC655,PHLC0655,23799.0,M,LUAD,Lung,Lung Adenocarcinoma,PHLC0655.TPT,T,primary,"T2a,N0,M0",Lung,PHLC0655.TPX,PHLC 655,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081695"
+PHLC77,PHLC0077,24272.0,M,LUSC,Lung,Lung Squamous Cell Carcinoma,PHLC0077.TPT,T,primary,"T4,N1,M0",Lung,PHLC0077.TPX,PHLC077,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081699"
+PHLC82,PHLC0082,24448.0,F,LUAD,Lung,Lung Adenocarcinoma,PHLC0082.TPT,T,primary,"T2a,N0,M0",Lung,PHLC0082.TPX,PHLC082,PX,NOD SCID,NOD.CB17-Prkdcscid/J,flank,heterotopic,tissue fragment,fresh,"PMID: 27750381, PMID: 21081701"
+PHLCH1581,PHLCH1581,,,,,,,,,,,,,,,,,,,,
+PHLCHCC827,PHLCHCC827,,,,,,,,,,,,,,,,,,,,
+PHLCNOTCH 10,PHLCNOTCH10,,,,,,,,,,,,,,,,,,,,
+PHLCOvarian,PHLCOvarian,,,,,,,,,,,,,,,,,,,,

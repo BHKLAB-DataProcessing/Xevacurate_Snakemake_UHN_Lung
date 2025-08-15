@@ -1,0 +1,40 @@
+rule scan:
+    input:
+        "../data/input/drug_screen"
+    output:
+        "../results/scan/XEVA_OFFICIAL_SHARING.json"
+    shell:
+        """
+        pixi run python src/xevacurate_new/run_scan.py
+        """
+
+rule process:
+    input:
+        "../results/scan/XEVA_OFFICIAL_SHARING.json"
+    output:
+        "../results/process/processed_data.txt",
+        "../results/process/qc_report.json"
+    shell:
+        """
+        pixi run python src/xevacurate_new/run_process.py
+        """
+
+rule update:
+    input:
+        "../results/process/processed_data.txt"
+    output:
+        "../results/update/update_model_drug_batch_data.tsv"
+    shell:
+        """
+        pixi run python src/xevacurate_new/run_update.py
+        """
+
+rule build:
+    input:
+        "../results/update/update_model_drug_batch_data.tsv"
+    output:
+        directory("../results/build/")
+    shell:
+        """
+        pixi run python src/xevacurate_new/run_build.py
+        """

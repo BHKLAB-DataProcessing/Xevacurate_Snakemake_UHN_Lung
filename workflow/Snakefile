@@ -1,0 +1,9 @@
+include: "rules/curation.smk"
+
+rule all:
+    input:
+        "results/build/model.csv",
+        "results/build/drug.csv",
+        "results/build/experiment.csv",
+        "results/build/expDesign.csv",
+        "results/xevaset/UHN_Tsao_Lung_DrugResponse_2022_v1.rds"

@@ -1,0 +1,6 @@
+docker:
+  xeva_r_image: xeva-build-r:bioc-3.20
+
+xevaset:
+  name: Tsao_Lung_2022
+  rds_name: UHN_Tsao_Lung_DrugResponse_2022_v1.rds

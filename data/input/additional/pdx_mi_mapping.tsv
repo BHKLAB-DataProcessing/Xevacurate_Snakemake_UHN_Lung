@@ -1,0 +1,46 @@
+pdx.mi.field	model.field
+"Submitter patient ID"	patient.id
+"Gender"	sex
+"Age"	
+"Diagnosis"	cancer.type.detailed
+"Consent to share data"
+"Ethnicity/race"
+"Current treatment drug"
+"Current treatment protocol (dose; details)"
+"Prior treatment protocol"
+"Response to prior treatment"
+"Virology status"
+"Submitter tumor ID"	specimenID
+"Primary tumor tissue of origin"	primary.tumor.site
+"Primary metastasis recurrence"	primary.recurrence.metastasis
+"Specimen tumor tissue"	specimen.collection.site
+"Tissue histology"
+"Tumor grade; classification"	TNM.stage
+"Disease stage; classification"
+"Specific markers (diagnostic linked); platform"
+"Is tumor from untreated patient?"
+"Original tumor sample type"	sample.class
+"Tumor from an existing PDX model? ID? Why sub-line?"
+"Submitter PDX ID"	modelID
+"Mouse strain (and source)"	host.strain.name
+"Strain immune system humanized?"
+"Type of humanization"
+"Tumor preparation"	engraftment.material
+"Injection type and site"	engraftment.site
+"Mouse treatment for engraftment"
+"Engraftment rate"
+"Engraftment time"	engraftment.date
+"Tumor characterization technology"
+"Tumor confirmed not to be of mouse/EBV origin"
+"Response to standard of care (pharmacologic positive control)"
+"Animal health status"
+"Passage QA performed"
+"Treatment passage"	'passage'
+"Treatment protocol (dose; details)"
+"Treatment response"
+"Tumor OMICS: sample id; sample site; purity (mouse vs. human); technology; passage"
+"Development of metastases in strain (Y/N site); passage"
+"Lag time/doubling time of tumor"
+"PDX model availability?"
+"Governance restriction for distribution"
+"ID for associated publication image archived data (URL PMID DOI)"	pubmed.id

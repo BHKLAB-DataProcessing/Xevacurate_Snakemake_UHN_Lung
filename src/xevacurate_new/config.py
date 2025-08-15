@@ -1,0 +1,6 @@
+BASE_DIR = "/Users/guanqiaofeng/Documents/BHK/Xeva/Xevacurate_Tsao_2022"
+DATA_DIR = f"{BASE_DIR}/data"
+DATA_ADDITIONAL_DIR = f"{BASE_DIR}/data/input/additional"
+DRUG_SCREEN_DIR = f"{BASE_DIR}/data/input/drug_screen"
+OMICS_DIR = f"{BASE_DIR}/data/input/omics"
+RESULTS_DIR = f"{BASE_DIR}/results"
