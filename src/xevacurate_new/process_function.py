@@ -163,7 +163,7 @@ def process_all_files(metadata_file: str, base_dir: str) -> (list, list):
                     qc_issues.append({"file": file_path, "issue": "processed dataframe is empty"})
             except Exception as e:
                 qc_issues.append({"file": file_path, "issue": str(e)})
-    
+
     return all_data, qc_issues
 
 def save_processed_data(all_data: list, processed_tsv: str) -> None:
@@ -177,6 +177,13 @@ def save_processed_data(all_data: list, processed_tsv: str) -> None:
     """
     if all_data:
         processed_data = pd.concat(all_data, ignore_index=True)
+        # assumes `all_data` is a pandas DataFrame
+        processed_data = processed_data.sort_values(
+            by=["file_name", "SampleID"],
+            ascending=[True, True],
+            na_position="last",      # push NaNs to the end
+            kind="mergesort"         # stable sort
+        ).reset_index(drop=True)
         processed_data.to_csv(processed_tsv, index=False, sep="\t")
         print(f"Processed data saved to: {processed_tsv}")
     else:

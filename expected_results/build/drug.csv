@@ -1,0 +1,39 @@
+drug.id,drugname.standardized,drug.alternativename,target,method,dose,dose.unit,treatment.type,drug.original,dose.original,frequency,is.single
+AZD4547,AZD4547,AZAD4547,FGFR,oral,25,mg/kg,regular,AZAD4547;AZD4547,25,daily,yes
+BGJ398,BGJ398,BGJ-398;BGJ698;BJG398;NVP-BGJ398;NVP-BJG398,FGFR,oral,25,mg/kg,regular,BGJ-398;BGJ398;BGJ698;BJG398;NVP-BGJ398;NVP-BJG398,25,daily,yes
+BGJ398+crizotinib,BGJ398+crizotinib,Combo,FGFR+MET/ALK,oral,25+50,mg/kg,regular,Combo,25+50,daily,no
+BKM120,BKM120,BKM 120;BKM-120,PIKeCA,oral,50,mg/kg,regular,BKM 120;BKM-120;BKM120,50,daily,yes
+PF384,PF384,,PI3KCA,IV,10,mg/kg,regular,PF384,10,daily,yes
+PF502,PF502,,,,,mg/kg,regular,PF502,,,yes
+RG7388,RG7388,RG7388-80mg/kg,MDM2,oral,80,mg/kg,regular,RG7388-80mg/kg,80,daily,yes
+RG7388-50,RG7388,RG7388-50mg/kg,MDM2,oral,50,mg/kg,variation,RG7388-50mg/kg,50,daily,yes
+RO599,RO599,,,,,mg/kg,regular,RO599,,,yes
+Vandetanib,Vandetanib,Van;Vendatinib,,,,mg/kg,regular,Van;Vendatinib,,,yes
+afatinib,afatinib,Afatinib,EGFR,oral,25,mg/kg,regular,Afatinib,25,daily,yes
+cetuximab,cetuximab,Cetuximab,EGFR,oral,20,mg/kg,regular,Cetuximab,20,2x weekly,yes
+cetuximab+RO599,cetuximab+RO599,RO599+ Cetux,EGFR+NA,oral+NA,20+NA,mg/kg,regular,RO599+ Cetux,20+NA,2x weekly+NA,no
+cisplatin,cisplatin,Cis;Cisplatin,DNA damage based chemo,IP,3,mg/kg,regular,Cis;Cisplatin,3,weekly,yes
+cisplatin+PF384,cisplatin+PF384,Cis + PF384;PF384 + Cis;PF384+ Cis,DNA damage based chemo+PI3KCA,IP+IV,3+10,mg/kg,regular,Cis + PF384;PF384 + Cis;PF384+ Cis,3+10,weekly+daily,no
+cisplatin+vinorelbine,cisplatin+vinorelbine,Cis + Vin;Cis+ Vin;Cis+Vin;Vin+Cis,DNA damage based chemo+taxol based chemo,IP,3+7,mg/kg,regular,Cis + Vin;Cis+ Vin;Cis+Vin;Vin+Cis,3+7,weekly,no
+control,control,CTRL;Cont;Control;Control- PBS;No Drug;Untreated;Vehicle;Vehicle+BrDU(IP)- 3 Hour Sac;Vehicle- 3 Hour Sac,,,,,,CTRL;Cont;Control;Control- PBS;No Drug;Untreated;Vehicle;Vehicle+BrDU(IP)- 3 Hour Sac;Vehicle- 3 Hour Sac,,,
+crizotinib,crizotinib,Criz;Crizotinib,MET/ALK,oral,50,mg/kg,regular,Criz;Crizotinib,50,daily,yes
+dacomitinib,dacomitinib,Dacomitinib;PF299;PF299 Pre-treated,EGFR,oral,3,mg/kg,regular,Dacomitinib;PF299;PF299 Pre-treated,3,daily,yes
+dacomitinib+PF384,dacomitinib+PF384,PF299+ PF384;PF384 + PF299,EGFR+PI3KCA,oral+IV,3+10,mg/kg,regular,PF299+ PF384;PF384 + PF299,3+10,daily,no
+dacomitinib+PF502,dacomitinib+PF502,PF299+PF502,EGFR+NA,oral+NA,3+NA,mg/kg,regular,PF299+PF502,3+NA,daily+NA,no
+dacomitinib+valproic,dacomitinib+valproic,Va + PF299,EGFR+HDAC,oral+NA,3+NA,mg/kg,regular,Va + PF299,3+NA,daily+NA,no
+docetaxel,docetaxel,Docetaxel,Taxane,IV,15,mg/kg,regular,Docetaxel,15,weekly,yes
+docetaxel+sleumetinib,docetaxel+sleumetinib,Doc + Sel Concomitant;Doc + Sel Sequential;Doc+ Sel Concomitant;Doce + Sel Sequential;Doce +Sel Concomitant,Taxane+MEK,IV+oral,15+25,mg/kg,regular,Doc + Sel Concomitant;Doc + Sel Sequential;Doc+ Sel Concomitant;Doce + Sel Sequential;Doce +Sel Concomitant,15+25,weekly+daily_rotatebyweek;weekly+daily_sametime,no
+erlotinib,erlotinib,Erlotinib;Erlotinib (Treat After Day 14);Erlotinib 50mg;Erlotinib- No Treatment Past Day 63,EGFR,oral,50,mg/kg,regular,Erlotinib;Erlotinib (Treat After Day 14);Erlotinib 50mg;Erlotinib- No Treatment Past Day 63,50,daily,yes
+erlotinib+RO599,erlotinib+RO599,RO599+Erlotinib,EGFR+NA,oral+NA,50+NA,mg/kg,regular,RO599+Erlotinib,50+NA,daily+NA,no
+erlotinib+crizotinib,erlotinib+crizotinib,Erlo + Criz,EGFR+MET/ALK,oral,50+50,mg/kg,regular,Erlo + Criz,50+50,daily,no
+erlotinib-25,erlotinib,Erlotinib 25mg,EGFR,oral,25,mg/kg,variation,Erlotinib 25mg,25,daily,yes
+gefitinib,gefitinib,Gefitinib;Gefitinib- Stop Treatment at Day 138,EGFR,oral,100,mg/kg,regular,Gefitinib;Gefitinib- Stop Treatment at Day 138,100,daily,yes
+gemcitabine,gemcitabine,Gemcitabine,antimetabolite,IP,100,mg/kg,regular,Gemcitabine,100,2x weekly,yes
+paclitaxel,paclitaxel,Paclitaxel,taxol based chemo,IP,10,mg/kg,regular,Paclitaxel,10,2x weekly,yes
+paclitaxel+PF384,paclitaxel+PF384,Pacli + PF384;Paclitaxel + PF384,taxol based chemo+PI3KCA,IP+IV,10+10,mg/kg,regular,Pacli + PF384;Paclitaxel + PF384,10+10,2x weekly+daily,no
+paclitaxel+PF502,paclitaxel+PF502,PF502+Paclitaxel,taxol based chemo+NA,IP+NA,10+NA,mg/kg,regular,PF502+Paclitaxel,10+NA,2x weekly+NA,no
+palbociclib,palbociclib,Palbociclib,CDK4,oral,150,mg/kg,regular,Palbociclib,150,daily,yes
+pemetrexed,pemetrexed,Pem,antifolate,IP,400,mg/kg,regular,Pem,400,2x weekly,yes
+sleumetinib,sleumetinib,Selumetinib,MEK,oral,25,mg/kg,regular,Selumetinib,25,daily,yes
+valproic,valproic,Valproic,HDAC,,,mg/kg,regular,Valproic,,,yes
+vinorelbine,vinorelbine,Vin;Vinorelbine,taxol based chemo,IP,7,mg/kg,regular,Vin;Vinorelbine,7,weekly,yes
