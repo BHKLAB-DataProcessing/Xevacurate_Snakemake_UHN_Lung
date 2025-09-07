@@ -236,6 +236,10 @@ If you use this workflow or the produced **XevaSet** in a publication, please ci
 
 **MIT**  
 
+## Author
+
+Guanqiao Feng
+
 ## Contributions
 
 Contributions are welcome!  
