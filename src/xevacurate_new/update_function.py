@@ -370,11 +370,14 @@ def update_batch_data(raw_file: str) -> pd.DataFrame:
     # Read raw data
     df = pd.read_csv(raw_file, sep="\t", low_memory=False)
     
-    # Create a 'batch' column by concatenating 'ModelID' and 'drug_id'
+    df = df[df["time"] >= 0]
     df["drug.id"] = df["drug"]
     df["file_number"] = "f" + (df.groupby("file_name").ngroup() + 1).astype(str) # need file name in batch infor to distinguis
-    df["batch"] = df["file_number"] + "." + df["SampleID"].str.split("_").str[0]+ ".TPX." + df["drug.id"].astype(str)
     df["model.id"] = df["file_number"] + "." + df["SampleID"].str.split("_").str[0]+ ".TPX." + df["drug.id"].astype(str) + "." + df["SampleID"].str.split("_").str[1].astype(str)
+    # only keep the rows where model.id showed up at least twice in the dataframe
+    df = df[df.groupby("model.id")["model.id"].transform("count") >= 2]
+    # Create a 'batch' column by concatenating 'ModelID' and 'drug_id'
+    df["batch"] = df["file_number"] + "." + df["SampleID"].str.split("_").str[0]+ ".TPX." + df["drug.id"].astype(str)
     df = df.rename(columns={"Drug": "drug"})
     
     return df

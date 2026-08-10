@@ -15,7 +15,7 @@ cetuximab+RO599,cetuximab+RO599,RO599+ Cetux,EGFR+NA,oral+NA,20+NA,mg/kg,regular
 cisplatin,cisplatin,Cis;Cisplatin,DNA damage based chemo,IP,3,mg/kg,regular,Cis;Cisplatin,3,weekly,yes
 cisplatin+PF384,cisplatin+PF384,Cis + PF384;PF384 + Cis;PF384+ Cis,DNA damage based chemo+PI3KCA,IP+IV,3+10,mg/kg,regular,Cis + PF384;PF384 + Cis;PF384+ Cis,3+10,weekly+daily,no
 cisplatin+vinorelbine,cisplatin+vinorelbine,Cis + Vin;Cis+ Vin;Cis+Vin;Vin+Cis,DNA damage based chemo+taxol based chemo,IP,3+7,mg/kg,regular,Cis + Vin;Cis+ Vin;Cis+Vin;Vin+Cis,3+7,weekly,no
-control,control,CTRL;Cont;Control;Control- PBS;No Drug;Untreated;Vehicle;Vehicle+BrDU(IP)- 3 Hour Sac;Vehicle- 3 Hour Sac,,,,,,CTRL;Cont;Control;Control- PBS;No Drug;Untreated;Vehicle;Vehicle+BrDU(IP)- 3 Hour Sac;Vehicle- 3 Hour Sac,,,
+control,control,CTRL;Cont;Control;Control- PBS;No Drug;Untreated;Vehicle,,,,,,CTRL;Cont;Control;Control- PBS;No Drug;Untreated;Vehicle,,,
 crizotinib,crizotinib,Criz;Crizotinib,MET/ALK,oral,50,mg/kg,regular,Criz;Crizotinib,50,daily,yes
 dacomitinib,dacomitinib,Dacomitinib;PF299;PF299 Pre-treated,EGFR,oral,3,mg/kg,regular,Dacomitinib;PF299;PF299 Pre-treated,3,daily,yes
 dacomitinib+PF384,dacomitinib+PF384,PF299+ PF384;PF384 + PF299,EGFR+PI3KCA,oral+IV,3+10,mg/kg,regular,PF299+ PF384;PF384 + PF299,3+10,daily,no

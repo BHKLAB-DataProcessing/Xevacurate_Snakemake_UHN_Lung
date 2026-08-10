@@ -101,13 +101,6 @@ def build_experiment(df: pd.DataFrame) -> pd.DataFrame:
     exp_df["time"] = pd.to_numeric(exp_df["time"], errors="coerce")
     # Drop NA values in 'time' (optional, depending on whether you want to keep them)
     exp_df_filtered = exp_df.dropna(subset=["time"])
-    # Keep only non-negative time points
-    exp_df_filtered = exp_df_filtered[exp_df_filtered["time"]>=0]
-
-    # remove single time point experiment (as such case will fail statistic analysis)
-    exp_df_filtered = exp_df_filtered[
-        exp_df_filtered.groupby("model.id")["model.id"].transform("count") > 1
-    ]
 
     exp_df_filtered.columns = exp_df_filtered.columns.str.replace("_", ".", regex=False)
 
