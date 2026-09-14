@@ -28,10 +28,6 @@
         "issue": "file processed successfully"
     },
     {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master EGFR Series Excel File (Excludes PHLC 12 and 77)_HCC827 R2 July 2013.xlsx",
-        "issue": "file processed successfully"
-    },
-    {
         "file": "data/input/drug_screen/data/input/drug_screen/Master CDK4 Series Excel File_191 P6 Nov 2014.xlsx",
         "issue": "file processed successfully"
     },
@@ -48,10 +44,6 @@
         "issue": "file processed successfully"
     },
     {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master EGFR Series Excel File (Excludes PHLC 12 and 77)_HCC827 R3 Sep 2013 .xlsx",
-        "issue": "processed dataframe is empty"
-    },
-    {
         "file": "data/input/drug_screen/data/input/drug_screen/Master KRAS Series Excel File_153 P6 Oct 2014.xlsx",
         "issue": "file processed successfully"
     },
@@ -62,10 +54,6 @@
     {
         "file": "data/input/drug_screen/data/input/drug_screen/Master EGFR Series Excel File (Excludes PHLC 12 and 77)_164_1_ P15 Mar 2013.xlsx",
         "issue": "file processed successfully"
-    },
-    {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master PTEN-low Series Excel File_Ovarian PD Oct 2012.xlsx",
-        "issue": "Could not find mouse number row"
     },
     {
         "file": "data/input/drug_screen/data/input/drug_screen/Master CDK4 Series Excel File_228 P5 Dec 2014.xlsx",
@@ -84,20 +72,8 @@
         "issue": "file processed successfully"
     },
     {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master PTEN-low Series Excel File_NOTCH 10 Aug 2012 4 Arm.xlsx",
-        "issue": "file processed successfully"
-    },
-    {
         "file": "data/input/drug_screen/data/input/drug_screen/Master PTEN-low Series Excel File_191 PD Pfizer Mar 2012 4 Arm.xlsx",
         "issue": "Could not find mouse number row"
-    },
-    {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master EGFR Series Excel File (Excludes PHLC 12 and 77)_HCC827 R1 Jan 2013.xlsx",
-        "issue": "file processed successfully"
-    },
-    {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master FGFR Series Excel File_H1581_2_ Sep 2013 .xlsx",
-        "issue": "file processed successfully"
     },
     {
         "file": "data/input/drug_screen/data/input/drug_screen/Master EGFR Series Excel File (Excludes PHLC 12 and 77)_137 Perhaps.xlsx",
@@ -121,10 +97,6 @@
     },
     {
         "file": "data/input/drug_screen/data/input/drug_screen/Master EGFR Series Excel File (Excludes PHLC 12 and 77)_192 P8 Apr 2013.xlsx",
-        "issue": "file processed successfully"
-    },
-    {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master FGFR Series Excel File_H1581 Dec 2013.xlsx",
         "issue": "file processed successfully"
     },
     {
@@ -164,15 +136,7 @@
         "issue": "file processed successfully"
     },
     {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master PTEN-low Series Excel File_Ovarian Jan 2013 8 Arms.xlsx",
-        "issue": "file processed successfully"
-    },
-    {
         "file": "data/input/drug_screen/data/input/drug_screen/Master KRAS Series Excel File_181_3_ P7 Aug 2014.xlsx",
-        "issue": "file processed successfully"
-    },
-    {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master FGFR Series Excel File_H1581 Aug 2013.xlsx",
         "issue": "file processed successfully"
     },
     {
@@ -274,10 +238,6 @@
     {
         "file": "data/input/drug_screen/data/input/drug_screen/Master PI3K Series Excel File_142 P6 Dec 2012.xlsx",
         "issue": "file processed successfully"
-    },
-    {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master PTEN-low Series Excel File_NOTCH 10 PD Jan 2012.xlsx",
-        "issue": "Could not find mouse number row"
     },
     {
         "file": "data/input/drug_screen/data/input/drug_screen/Master RET fusion Series Excel File_Sheet2.xlsx",
@@ -396,10 +356,6 @@
         "issue": "file processed successfully"
     },
     {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master PTEN-low Series Excel File_NOTCH 10 Pfizer Oct 2012 6 Arm.xlsx",
-        "issue": "file processed successfully"
-    },
-    {
         "file": "data/input/drug_screen/data/input/drug_screen/Master KRAS Series Excel File_119 P5 May 2014.xlsx",
         "issue": "file processed successfully"
     },
@@ -465,10 +421,6 @@
     },
     {
         "file": "data/input/drug_screen/data/input/drug_screen/Master RET fusion Series Excel File_410_Vandetanib_Kelly.xlsx",
-        "issue": "file processed successfully"
-    },
-    {
-        "file": "data/input/drug_screen/data/input/drug_screen/Master PTEN-low Series Excel File_NOTCH 10_2_ Oct 2011.xlsx",
         "issue": "file processed successfully"
     },
     {
