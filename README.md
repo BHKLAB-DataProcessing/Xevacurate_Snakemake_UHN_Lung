@@ -73,7 +73,7 @@ data/
     │   ├── all_model_clinical.csv
     │   └── all_drug_mapping.xlsx
     └── omics/
-        ├── data_expression_mRNA.txt   # RNA TPM/CPM matrix (rows: genes, cols: samples)
+        ├── data_expression_mRNA.txt   # log2 microarray intensity matrix (rows: genes, cols: samples)
         ├── Tsao_Lung_WES_mutation_2025.tsv  # WES mutation matrix
         └── data_CNA.tsv               # CNV matrix
 ```
