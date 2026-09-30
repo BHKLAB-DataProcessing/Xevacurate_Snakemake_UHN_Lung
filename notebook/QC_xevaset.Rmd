@@ -1,0 +1,153 @@
+---
+title: "QC: UHN Tsao Lung PDX XevaSet"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+    df_print: paged
+date: "`r format(Sys.Date())`"
+---
+
+<style>
+.scroll-box {
+  max-height: 350px;
+  overflow-y: auto;
+  background-color: inherit;
+}
+</style>
+
+## Download required packages
+
+```{r chunk-1}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+if (!requireNamespace("Xeva", quietly = TRUE))
+    BiocManager::install("Xeva", version = "3.20")
+```
+
+## Load library
+
+```{r chunk-2}
+library(Xeva)
+```
+
+## Read Dataset
+
+```{r chunk-3}
+x.set <- readRDS("../expected_results/xevaset/UHN_Tsao_Lung_DrugResponse_2022_v1.rds")
+```
+
+```{r chunk-4}
+getwd()
+```
+
+## 1. Dataset Structure and General Information
+
+### 1.1 Dataset annotation
+
+```{r chunk-5}
+x.set
+```
+
+### 1.2 Dataset structure
+
+```{r chunk-6}
+slotNames(x.set)
+```
+
+### 1.3 Model data structure
+
+```{r chunk-7}
+head(x.set@model)
+```
+
+### 1.4 Drug data structure
+
+```{r chunk-8}
+head(x.set@drug)
+```
+
+### 1.5 Drug screening data structure
+
+```{r chunk-9, class.output="scroll-box"}
+head(x.set@sensitivity)
+```
+
+### 1.6 Batch information
+
+```{r chunk-10, class.output="scroll-box"}
+head(x.set@expDesign)
+```
+
+### 1.7 Molecular Profiles
+
+```{r chunk-11}
+head(x.set@molecularProfiles)
+```
+
+### 1.8 Mapping between drug experiment (model.id) to molecular profile (biobase.id)
+
+```{r chunk-12}
+head(x.set@modToBiobaseMap)
+```
+
+## 2. Model Data
+
+```{r chunk-13}
+# access model data
+x.mod <- modelInfo(x.set)
+dim(x.mod)
+```
+
+```{r chunk-14}
+x.mod[1:4, ]
+```
+
+## 3. Experiment Data
+
+```{r chunk-15}
+# access experiment for a model
+model.data <- getExperiment(x.set, model.id='f1.PHLC402.TPX.crizotinib.P601')
+head(model.data)
+```
+
+```{r chunk-16}
+model.data <- getExperiment(x.set, model.id='f1.PHLC402.TPX.control.P603')
+head(model.data)
+```
+
+## 3. Batch Data
+
+```{r chunk-17}
+batch.name <- batchInfo(x.set)
+batch.name[1:4]
+```
+
+```{r chunk-18}
+batchInfo(x.set, batch="f1.PHLC402.TPX.crizotinib")
+```
+
+## 4. PDX Growth Cure
+
+```{r chunk-19}
+# set color of lines, error visualization with errorbar
+plotPDX(x.set, batch = "f4.PHLC191.TPX.palbociclib", 
+        control.col = "#a6611a", 
+        treatment.col = "#018571",
+        major.line.size = 1,
+        max.time = 100,
+        SE.plot='errorbar')
+```
+
+```{r chunk-20}
+# normalize volume, change color of lines, error visualization with ribbon
+plotPDX(x.set, batch = "f4.PHLC191.TPX.palbociclib", 
+        vol.normal = TRUE, 
+        control.col = "#a6611a", 
+        treatment.col = "#018571",
+        major.line.size = 1,
+        max.time = 100,
+        SE.plot='ribbon')
+```
+
